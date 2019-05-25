@@ -1,1 +1,154 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    direction: rtl;
+    color: #5D6063;
+}
+
+.hr {
+    border-style: dashed;
+    border-color: darkgray;
+}
+
+.header {
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #EAEDF0;
+    /* box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.4); */
+}
+
+.warpper {
+    display: inline-block;
+}
+
+.header h1 {
+    font-size: 57px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.header .subHeader {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.header .subHeader .subHeaderText {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.header .subHeader::before, .header .subHeader::after {
+    content: '';
+    position: relative;
+    flex: 1;
+    height: 1px;
+    background-color: #5D6063;
+    top: 15px;
+}
+
+.header .subHeader::before {
+    margin-left: 12px;
+}
+
+.header .subHeader::after {
+    margin-right: 12px;
+}
+
+.header .headerInfo {
+    font-size: 18px;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.content {
+    text-align: center;
+    overflow-x: hidden;
+    background: #F5F6FA;
+    box-shadow: inset 0px 15px 20px -10px rgba(0,0,0,0.4),
+                inset 0px -15px 20px -10px rgba(0,0,0,0.4)
+}
+
+.sectionContainer {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+.sectionHeader {
+    margin-top: 25px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sectionText {
+    font-size: 18px;
+    text-align: right;
+}
+
+.sectionText p {
+    margin: 10px 0;
+}
+
+.contanctUsText {
+    margin-top: 40px;
+}
+
+.groupsCont {
+    padding: 30px 10px;
+}
+
+.joinBtn {
+    display: inline-block;
+    position: absolute;
+    width: 120px;
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #5995DA;
+    border: 1px solid #5D6063;
+    padding: 4px 0 4px 0;
+    border-radius: 50px;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.joinBtn:hover {
+    color: #FFFFFF;
+    background-color: #407FC7;
+    border: 1px solid #5D6063;
+}
+
+.footer {
+    text-align: center;
+    background-color: white;
+}
+
+@media only screen and (max-width: 650px) {
+    .header {
+        padding: 15px 0;
+    }
+
+    .header h1 {
+        font-size: 37px;
+    }
+
+    .sectionContainer {
+        width: calc(100% - 40px);
+        margin: 0 20px;
+    }
+
+    .groupsCont {
+        padding: 30px 20px;
+    }
+}
