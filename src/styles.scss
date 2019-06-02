@@ -16,11 +16,37 @@ html, body {
     border-color: darkgray;
 }
 
+.toolbar {
+    height: 50px;
+    background-color: #78b2ed;
+    border-bottom: 1px solid #EAEDF0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .options-container {
+        flex: 0 1 auto;
+    }
+
+    .title-continer {
+        flex: 1;
+    }
+
+    .settings-container {
+        flex: 0 1 auto;
+        margin-left: 10px;
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
 .header {
     padding: 10px 0;
     text-align: center;
     border-bottom: 1px solid #EAEDF0;
-    /* box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.4); */
 }
 
 .warpper {
@@ -70,10 +96,20 @@ html, body {
 
 .content {
     text-align: center;
+    font-size: 18px;
     overflow-x: hidden;
-    background: #F5F6FA;
     box-shadow: inset 0px 15px 20px -10px rgba(0,0,0,0.4),
-                inset 0px -15px 20px -10px rgba(0,0,0,0.4)
+                inset 0px -15px 20px -10px rgba(0,0,0,0.4);
+}
+
+.bow {
+    background: #F5F6FA;
+    color: #5D6063;
+}
+
+.wob {
+    background: #000000;
+    color: #ffffff;
 }
 
 .sectionContainer {
@@ -85,12 +121,12 @@ html, body {
 
 .sectionHeader {
     margin-top: 25px;
-    font-size: 24px;
+    font-size: 1.2em;
     margin-bottom: 20px;
 }
 
 .sectionText {
-    font-size: 18px;
+    font-size: 1em;
     text-align: right;
 }
 
@@ -106,24 +142,18 @@ html, body {
     padding: 30px 10px;
 }
 
-.joinBtn {
-    display: inline-block;
-    position: absolute;
-    width: 120px;
+.btn {
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     color: #FFFFFF;
     background-color: #5995DA;
     border: 1px solid #5D6063;
-    padding: 4px 0 4px 0;
+    padding: 10px 20px 10px 20px;
     border-radius: 50px;
     cursor: pointer;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
 }
 
-.joinBtn:hover {
+.btn:hover {
     color: #FFFFFF;
     background-color: #407FC7;
     border: 1px solid #5D6063;

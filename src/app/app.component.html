@@ -1,3 +1,20 @@
+<div class="toolbar">
+  <div class="options-container">
+  </div>
+  <div class="title-container">
+  </div>
+  <div class="settings-container" (click)="showSettings = true">
+    <img src='assets/settings.svg'/>
+  </div>
+</div>
+<app-navigation-bar [direction]="settingsDirection"
+                    [title]="'הגדרות'"
+                    [isOpen]="showSettings"
+                    (close)="showSettings = false">
+  <app-settings (settingsSaved)="showSettings = false">
+
+  </app-settings>
+</app-navigation-bar>
 <div class="header">
   <div class="warpper">
     <h1>לעילוי נשמת</h1>
@@ -11,7 +28,8 @@
     </div>
   </div>
 </div>
-<div class="content">
+<div class="content" [ngClass]="appSettings.fontColor"
+     [style.font-size.px]="appSettings.fontSize">
   <router-outlet></router-outlet>
 </div>
 <div class="footer">

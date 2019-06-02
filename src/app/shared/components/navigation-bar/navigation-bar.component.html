@@ -1,0 +1,21 @@
+<div class="navigation-layout"
+  *ngIf="isOpen"
+  [@open]="{ value: 'open', params: openParams }"
+  [style.justify-content]="justify"
+  [style.align-items]="valign">
+  <div class="navigation-bar"
+       [style.width]="width"
+       [style.height]="height">
+    <div class="top-bar" [style.justify-content]="justify">
+      <div class="close-icon" (click)="close.emit()">
+        <img src="assets/close.svg" />
+      </div>
+      <div class="navigation-title">
+        {{title}}
+      </div>
+    </div>
+    <div class="navigation-content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
